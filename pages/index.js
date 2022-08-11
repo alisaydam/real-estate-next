@@ -48,17 +48,9 @@ export default function Home(props) {
         <RomisTvsection />
         <PropCategorySection />
         <CardSection />
-        <Footer />
-        <div className="h-screen bg-gray">s</div>
       </main>
-      <footer className={styles.footer}>
-        <Image
-          src="/vercel.svg"
-          alt="Vercel Logo"
-          width={72}
-          height={16}
-          style={{ background: "white" }}
-        />
+      <footer>
+        <Footer />
       </footer>
     </div>
   );

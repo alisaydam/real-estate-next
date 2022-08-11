@@ -8,7 +8,6 @@ export default function App() {
   const log = () => {
     if (editorRef.current) {
       const data = editorRef.current.getContent();
-      // console.log(editorRef.current);
     }
   };
   useEffect(() => {

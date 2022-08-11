@@ -15,8 +15,9 @@ module.exports = {
       colors: {
         clrText: "var(--color-text-primary)",
         clrBG: "var(--color-bg-primary)",
-        clrSecondary: "var(--color-text-secondary)",
+        clrSecondaryText: "var(--color-text-secondary)",
         clrGradient: "var(--color-gradient-green)",
+        btnGreen: "#45FF14",
       },
     },
   },

@@ -20,7 +20,6 @@ export default function SearchProperties() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    console.log(formData);
   }
 
   return (

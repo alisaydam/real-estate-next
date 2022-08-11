@@ -1,19 +1,16 @@
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useContext } from "react";
+import { AppContext } from "../lib/state";
 
 export default function RomisMessage() {
-  const [theme, setTheme] = useState("");
+  const { theme } = useContext(AppContext);
 
-  useEffect(() => {
-    setTheme(localStorage.getItem("theme"));
-    console.log(theme);
-  });
   return (
     <div className="flex-col p-32 space-y-36 mt-24">
       <div className="flex justify-between space-y">
         <picture className="w-4/12 min-w-4/12">
           <img
-            src={theme !== "dark" ? "/logo.png" : "/logo-w.png"}
+            src={theme === "dark" ? "/logo.png" : "/logo-w.png"}
             alt="romis real estate"
           />
         </picture>
@@ -28,7 +25,7 @@ export default function RomisMessage() {
           </p>
         </div>
       </div>
-      <hr className="border-solid border-2 bg-lightText border-lightText " />
+      <hr className="border-solid border bg-clrText border-clrText" />
       <div className="flex justify-center space-x-8">
         <a>
           <Image src="/email.png" alt="email" width={70} height={70}></Image>

@@ -3,14 +3,17 @@ import Link from "next/link";
 import styles from "./styles/components.module.css";
 import LocaleSwitcher from "./Locale-switcher";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { AppContext } from "../lib/state";
 import dynamic from "next/dynamic";
 
 const ThemeToggle = dynamic(() => import("../components/ThemeToggle"), {
   ssr: false,
 });
 
-export default function Navbar({ href }) {
+export default function Navbar() {
+  const { setTheme } = useContext(AppContext);
+
   const router = useRouter();
   const [activeTheme, setActiveTheme] = useState("");
   const { locale, locales, defaultLocale, asPath, pathName } = router;
@@ -19,8 +22,8 @@ export default function Navbar({ href }) {
   }, [asPath]);
 
   function isDark(value) {
-    console.log(value);
     setActiveTheme(value);
+    setTheme(value);
   }
 
   const style = {

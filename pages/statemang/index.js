@@ -3,11 +3,11 @@
 // import the useContext Hook
 import React, { useContext } from "react";
 // import the Context
-import { MovieContext } from "../../lib/state";
+import { AppContext } from "../../lib/state";
 
 export default function Movies() {
   const { movies, setMovies, bookedMovies, setBookedMovies } =
-    useContext(MovieContext);
+    useContext(AppContext);
   // function to add items and price
   const moviee = [{ title: "Riddick", price: 5 }];
   const add = (movie) => {
