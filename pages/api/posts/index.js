@@ -1,0 +1,13 @@
+import { posts } from "../../../data";
+
+export default function handler(req, res) {
+ 
+  console.log((req.cookies.sasas = "sasa"));
+  console.log((req.cookies.dddd = "dddd"));
+  console.log(res.json);
+  return res.status(200).json(posts);
+}
+  // Then save email to your database, etc...
+  // Then save email to your database, etc...
+  // Then save email to your database, etc...
+  // Then save email to your database, etc...
