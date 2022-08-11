@@ -32,6 +32,10 @@
   font-size: 1.5rem;
   font-weight: 600;
 }
+.list_item_side {
+  font-size: 3rem;
+  font-weight: 600;
+}
 .list_item:hover {
   color: gray;
 }
@@ -42,6 +46,7 @@
   cursor: pointer;
   margin-right: 2rem;
   text-align: right;
+  z-index: 45;
 }
 .languages:focus {
   pointer-events: none;
@@ -54,14 +59,14 @@
   background-color: var(--color-bg-primary);
   pointer-events: auto;
   z-index: 1;
+  left: -0.4rem;
   opacity: 0;
   visibility: hidden;
   position: absolute;
   transition: visibility 1s;
   z-index: 2;
 }
-.lang_con {
-  height: 3rem;
+.lang_con { 
   display: flex;
   align-items: center;
 }
@@ -195,4 +200,16 @@
   justify-content: space-between;
   gap: 2rem;
   margin-top: 2rem;
+}
+
+ 
+.nav_container:focus-within .toggle_button {
+  pointer-events: none;
+}
+.nav_content { 
+  transform: translateX(100%);
+  transition: transform 0.3s;
+}
+.nav_container:focus-within .nav_content {
+   transform: none;
 }

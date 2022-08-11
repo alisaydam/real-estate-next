@@ -10,9 +10,7 @@ export default function LocaleSwitcher() {
 
   return (
     <div tabIndex="0" className={styles.languages}>
-      <div className={styles.lang_con}>
-        <img src={`/${activeLocale}.png`} alt="counrty flag" />{" "}
-      </div>
+      <div>{activeLocale.toLocaleUpperCase()}</div>
       <div className={styles.languages_dropdown}>
         {otherLocales.map((locale) => {
           const { pathname, query, asPath } = router;
@@ -20,8 +18,9 @@ export default function LocaleSwitcher() {
             <li key={locale}>
               <Link href={{ pathname, query }} as={asPath} locale={locale}>
                 <div className={styles.lang_con}>
-                  <img src={`/${locale}.png`} alt="counrty flag" />{" "}
-                  {/* <a>{locale.toLocaleUpperCase()}</a> */}
+                  <a className="p-2 hover:bg-sky-700">
+                    {locale.toLocaleUpperCase()}
+                  </a>
                 </div>
               </Link>
             </li>
