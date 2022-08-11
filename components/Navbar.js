@@ -31,17 +31,13 @@ export default function Navbar() {
   };
   return (
     <div className={styles.nav_wrap}>
-      <div>
-        <Link href="/">
-          <a>
-            <div style={{ width: 250 }}>
-              <img
-                src={activeTheme === "dark" ? "/logo.png" : "/logo-w.png"}
-                alt="romisalanya"
-              />
-            </div>
-          </a>
-        </Link>
+      <div className="flex justify-between w-2/12  ">
+        <picture>
+          <img
+            src={activeTheme === "dark" ? "/logo.png" : "/logo-w.png"}
+            alt="romis real estate"
+          />
+        </picture>
       </div>
       <div className={styles.nav_list_wrap}>
         <ul className={styles.nav_list}>

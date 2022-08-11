@@ -6,7 +6,7 @@ export default function Footer() {
   const { theme } = useContext(AppContext);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-clrGradient to-clrBG flex flex-col pt-32 pr-32 pl-32 ">
+    <div className="bg-gradient-to-b from-clrGradient to-clrBG flex flex-col pt-32 pr-32 pl-32 ">
       <picture className="w-3/12 max-w-4/12">
         <img
           src={theme === "dark" ? "/logo.png" : "/logo-w.png"}
