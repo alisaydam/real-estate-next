@@ -100,3 +100,17 @@ export const posts = [
     gender: "male",
   },
 ];
+
+
+export const properties = [
+  {
+    id: "1",
+    name: "Obi-Wan Kenobi",
+    height: "182",
+    mass: "77",
+    hair_color: "auburn, white",
+    skin_color: "fair",
+    eye_color: "blue-gray",
+    gender: "male",
+  },
+];

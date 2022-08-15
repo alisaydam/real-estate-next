@@ -9,8 +9,18 @@ export default function LocaleSwitcher() {
   const otherLocales = locales.filter((locale) => locale !== activeLocale);
 
   return (
-    <div tabIndex="0" className={styles.languages}>
-      <div>{activeLocale.toLocaleUpperCase()}</div>
+    <div tabIndex="0" className={styles.languages + " mr-4"}>
+      <div className="flex gap-2">
+        <p className="border-solid border-2 border-btnGreen px-2 w-32">
+          {activeLocale.toLocaleUpperCase()} ⮟
+        </p>
+        <p
+          tabIndex="1"
+          className="border-solid border-2 text-txtGreen font-semibold border-btnGreen bg-btnGreen px-2"
+        >
+          CONTACT
+        </p>
+      </div>
       <div className={styles.languages_dropdown}>
         {otherLocales.map((locale) => {
           const { pathname, query, asPath } = router;
@@ -18,7 +28,7 @@ export default function LocaleSwitcher() {
             <li key={locale}>
               <Link href={{ pathname, query }} as={asPath} locale={locale}>
                 <div className={styles.lang_con}>
-                  <a className="p-2 hover:bg-sky-700">
+                  <a className="p-2 hover:bg-sky-700 px-10">
                     {locale.toLocaleUpperCase()}
                   </a>
                 </div>

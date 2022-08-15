@@ -69,7 +69,7 @@ export default function PropCategorySection() {
         </a>
       </Link>
       <Link href={""}>
-        <a>
+        <a className="hidden sm:block">
           <div className="flex-col overflow-hidden w-auto rounded-tr-lg rounded-bl-lg text-center">
             <div className="relative">
               <p className="text-5xl font-bold absolute right-0 left-0 mx-auto z-10 mt-4">

@@ -31,15 +31,18 @@ export default function Navbar({ navRef }) {
   };
   return (
     <div className={styles.nav_wrap}>
-      <div className="flex justify-between w-2/12  ">
-        <picture>
-          <img
-            className="min-w-ful"
-            src={activeTheme === "dark" ? "/logo.png" : "/logo-w.png"}
-            alt="romis real estate"
-          />
-        </picture>
-      </div>
+      <Link href="/">
+        <div className="flex justify-between w-2/12 cursor-pointer ">
+          <picture>
+            <img
+              style={{ minWidth: "15rem" }}
+              className="min-w-ful"
+              src={activeTheme === "dark" ? "/logo.png" : "/logo-w.png"}
+              alt="romis real estate"
+            />
+          </picture>
+        </div>
+      </Link>
       <div className={styles.nav_list_wrap + "  hidden space-x-6 md:flex"}>
         <ul className={styles.nav_list}>
           <li className={styles.list_item} style={asPath === "/" ? style : {}}>
@@ -49,9 +52,9 @@ export default function Navbar({ navRef }) {
           </li>
           <li
             className={styles.list_item}
-            style={asPath === "/post" ? style : {}}
+            style={asPath === "/properties" ? style : {}}
           >
-            <Link href="/post">
+            <Link href="/properties">
               <a>Properties</a>
             </Link>
           </li>
@@ -118,7 +121,7 @@ export default function Navbar({ navRef }) {
             <div className="flex flex-col absolute -bottom-24 z-40 md:hiddens">
               <div
                 tabIndex="0"
-                className={`${styles.nav_content} top-0 w-[25vw] bg-clrBG  p-10 pl-20 fixed h-full  ease-in-out duration-500 mt-28 right-0 translate-x-0`}
+                className={`${styles.nav_content} top-0 w-[35vw] bg-clrBG  p-10 fixed h-full  ease-in-out duration-500 mt-28 right-0 translate-x-0`}
               >
                 <ul className="flex flex-col gap-8">
                   <li
@@ -133,7 +136,7 @@ export default function Navbar({ navRef }) {
                     className={styles.list_item_side}
                     style={asPath === "/post" ? style : {}}
                   >
-                    <Link href="/post">
+                    <Link href="/properties">
                       <a>Properties</a>
                     </Link>
                   </li>

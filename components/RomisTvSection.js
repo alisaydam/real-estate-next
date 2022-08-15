@@ -32,7 +32,7 @@ export default function RomisTvsection() {
         </a>
       </Link>
       <Link href="/">
-        <a>
+        <a className="hidden sm:block">
           <div className="flex-col overflow-hidden w-auto rounded-tl-lg rounded-br-lg">
             <Image
               alt="Mountains"

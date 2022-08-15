@@ -50,7 +50,7 @@ export default function BlogsSection() {
         </a>
       </Link>
       <Link href="/">
-        <a>
+        <a className="hidden sm:block">
           <div className="flex-col overflow-hidden w-auto">
             <Image
               alt="Mountains"

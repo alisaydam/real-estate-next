@@ -9,8 +9,7 @@ import RomisMessage from "../components/RomisMessage";
 import BlogsSection from "../components/BolgsSection";
 import RomisTvsection from "../components/RomisTvSection";
 import PropCategorySection from "../components/PropCategorySection";
-import CardSection from "../components/CardSection";
-import Footer from "../components/Footer";
+import CardSection from "../components/RomisCardSection";
 
 export async function getStaticProps({ locale }) {
   return {
@@ -38,9 +37,9 @@ export default function Home(props) {
             <source src="vid1.mp4" type="video/mp4" />
             <source src="vid2.mp4" type="video/mp4" />
           </video>{" "}
+          <SearchProperties />
         </div>
         <div className={styles.search_popular}>
-          <SearchProperties />
           <PopularSection />
           <RomisMessage />
         </div>
@@ -49,9 +48,6 @@ export default function Home(props) {
         <PropCategorySection />
         <CardSection />
       </main>
-      <footer>
-        <Footer />
-      </footer>
     </div>
   );
 }

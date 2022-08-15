@@ -6,8 +6,8 @@ module.exports = {
   ],
   theme: {
     screens: {
-      sm: "480px",
-      md: "768px",
+      sm: "650px",
+      md: "800px",
       lg: "976px",
       xl: "1440px",
     },
@@ -18,6 +18,13 @@ module.exports = {
         clrSecondaryText: "var(--color-text-secondary)",
         clrGradient: "var(--color-gradient-green)",
         btnGreen: "#45FF14",
+        txtGreen: "#176030",
+      },
+      boxShadow: {
+        xl: "2px 2px 2px 1px rgba(0, 0, 0, 0.2)",
+      },
+      borderRadius: {
+        "2xl": "10px",
       },
     },
   },
