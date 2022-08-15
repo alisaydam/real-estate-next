@@ -5,7 +5,7 @@ import PropertyCard from "../../components/PropertyCard";
 export default function Properties() {
   return (
     <main className={styles.main}>
-      <div className={styles.video_con + " mb-80  md:mb-40"}>
+      <div className={styles.video_con}>
         <picture className={styles.video}>
           <img src="/house2.png" alt="home" />
         </picture>{" "}

@@ -11,7 +11,7 @@ export default function LocaleSwitcher() {
   return (
     <div tabIndex="0" className={styles.languages + " mr-4"}>
       <div className="flex gap-2">
-        <p className="border-solid border-2 border-btnGreen px-2 w-32">
+        <p className="border-solid border-2 border-btnGreen px-2  md:w-32">
           {activeLocale.toLocaleUpperCase()} ⮟
         </p>
         <p
@@ -28,7 +28,7 @@ export default function LocaleSwitcher() {
             <li key={locale}>
               <Link href={{ pathname, query }} as={asPath} locale={locale}>
                 <div className={styles.lang_con}>
-                  <a className="p-2 hover:bg-sky-700 px-10">
+                  <a className="p-2 hover:bg-sky-700 px-6 md:px-10">
                     {locale.toLocaleUpperCase()}
                   </a>
                 </div>

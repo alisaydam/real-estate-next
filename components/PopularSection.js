@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function PopularSection() {
   return (
     <div>
-      <Section name="Popular" title="Our Popular">
+      <Section href="/" name="Popular" title="Our Popular">
         <Link href="#">
           <a>
             <div className={styles.properties_card}>

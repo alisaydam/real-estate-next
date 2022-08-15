@@ -1,5 +1,3 @@
-import Section from "./Section";
-import Button from "./Button";
 import styles from "./styles/components.module.css";
 import Link from "next/link";
 import Image from "next/image";

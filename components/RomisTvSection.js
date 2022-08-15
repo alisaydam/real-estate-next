@@ -4,7 +4,11 @@ import Image from "next/image";
 
 export default function RomisTvsection() {
   return (
-    <Section name="Romis TV" title="Comfort is our Top priority for you">
+    <Section
+      href="/"
+      name="Romis TV"
+      title="Comfort is our Top priority for you"
+    >
       <Link href="/">
         <a>
           <div className="flex-col overflow-hidden w-auto rounded-tl-lg rounded-br-lg">

@@ -35,8 +35,7 @@ export default function Navbar({ navRef }) {
         <div className="flex justify-between w-2/12 cursor-pointer ">
           <picture>
             <img
-              style={{ minWidth: "15rem" }}
-              className="min-w-ful"
+              className="min-w-[125px] md:min-w-[150px]"
               src={activeTheme === "dark" ? "/logo.png" : "/logo-w.png"}
               alt="romis real estate"
             />
@@ -107,7 +106,7 @@ export default function Navbar({ navRef }) {
           <div className={`${styles.nav_container} md:hidden`}>
             <button
               tabIndex="0"
-              className={`${styles.toggle_button} flex items-center text-clrText p-5`}
+              className={`${styles.toggle_button} flex items-center text-clrText pr-5`}
             >
               <svg
                 className="h-12 w-12 fill-current"

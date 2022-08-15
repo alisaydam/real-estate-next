@@ -4,7 +4,11 @@ import Image from "next/image";
 
 export default function PropCategorySection() {
   return (
-    <Section name="Properties Categories" title="Explore Out Properties">
+    <Section
+      href="/"
+      name="Properties Categories"
+      title="Explore Out Properties"
+    >
       <Link href={""}>
         <a>
           <div className="flex-col overflow-hidden w-auto rounded-tr-lg rounded-bl-lg text-center">

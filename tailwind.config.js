@@ -27,6 +27,10 @@ module.exports = {
         "2xl": "10px",
       },
     },
+    minWidth: {
+      big: "150px",
+      small: "100px",
+    },
   },
   plugins: [],
 };

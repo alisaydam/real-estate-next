@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function BlogsSection() {
   return (
-    <Section name="Blogs" title="Latest housing information">
+    <Section href="/" name="Blogs" title="Latest housing information">
       <Link href="/">
         <a>
           <div className="flex-col overflow-hidden w-auto rounded-tr-lg rounded-bl-lg">
