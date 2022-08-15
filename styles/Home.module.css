@@ -8,8 +8,7 @@
 } 
 .video_con{  
   width: 100%;
-  position: relative;
-  height: 85vh; 
+  position: relative; 
   object-fit: scale-down;
 } 
 .video {    

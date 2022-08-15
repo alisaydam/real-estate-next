@@ -11,7 +11,7 @@ export default function Properties() {
         </picture>{" "}
         <SearchProperties />
       </div>
-      <div className="grid gap-8 grid-cols-1 md:grid-cols-2 mx-auto mt-80 md:mt-0">
+      <div className="grid gap-8 grid-cols-1 md:grid-cols-2 mx-auto mt-80 md:mt-30">
         <PropertyCard pic="/house.png" />
         <PropertyCard pic="/house3.png" />
         <PropertyCard pic="/house2.png" />

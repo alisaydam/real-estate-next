@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function PopularSection() {
   return (
-    <div>
+    <div className="md:pt-20">
       <Section href="/" name="Popular" title="Our Popular">
         <Link href="#">
           <a>
