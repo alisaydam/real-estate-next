@@ -33,7 +33,7 @@ body[data-theme="light"] {
 body[data-theme="dark"] {
   --color-text-primary: #e3e3e3;
   --color-text-secondary: #076963;
-  --color-gradient-green: #0a2012;
+  --color-gradient-green: var(--color-bg-primary);
   --color-bg-primary: #15232d;
   --color-bg-toggle: #a9a9a9;
 }

@@ -11,7 +11,7 @@ export default function Footer() {
       <div
         className="flex flex-col pt-10"
         style={{
-          maxWidth: "80rem",
+          maxWidth: "120rem",
           margin: "auto",
         }}
       >

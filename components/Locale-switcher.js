@@ -12,7 +12,7 @@ export default function LocaleSwitcher() {
     <div tabIndex="0" className={styles.languages + " mr-4"}>
       <div className="flex gap-2">
         <p className="border-solid border-2 border-btnGreen px-2  md:w-32">
-          {activeLocale.toLocaleUpperCase()} ⮟
+          {activeLocale.toLocaleUpperCase()} ▼
         </p>
         <p
           tabIndex="1"

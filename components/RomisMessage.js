@@ -9,7 +9,7 @@ export default function RomisMessage() {
     <div
       className="flex-col mx-auto mt-32 mb-16"
       style={{
-        maxWidth: "80rem",
+        maxWidth: "120rem",
       }}
     >
       <div className="flex justify-between gap-8">
@@ -31,7 +31,7 @@ export default function RomisMessage() {
         </div>
       </div>
       <hr className="border-solid border bg-clrText border-clrText my-10" />
-      <SocialRow size="40" />
+      <SocialRow size="50" />
     </div>
   );
 }

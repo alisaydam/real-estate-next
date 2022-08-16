@@ -6,7 +6,7 @@ export default function RomisCardSection() {
   return (
     <div className={styles.section_con}>
       <div
-        className={styles.section_header + " flex-row-reverse mb-4"}
+        className={styles.section_header + " flex-row-reverse mb-10"}
         style={{ alignItems: "flex-start" }}
       >
         <div className={styles.slogan + " max-w-4xl font-semibold"}>
@@ -30,10 +30,10 @@ export default function RomisCardSection() {
             <span className="text-2xl pl-4">Free Flowers &#8195;&#8195;</span>
           </div>
         </div>
-        <div className="shrink-0">
+        <div className="shrink-0 flex   w-6/12 justify-center">
           <Link href="/">
             <a>
-              <Image alt="Mountains" src="/rect.png" width={250} height={250} />
+              <Image alt="Mountains" src="/rect.png" width={350} height={350} />
             </a>
           </Link>
         </div>

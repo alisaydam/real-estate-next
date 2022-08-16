@@ -9,7 +9,10 @@ export default function PropertyCard({ pic }) {
           className="flex w-full overflow-hidden shadow-xl"
           style={{ borderRadius: "3rem 0 3rem 0" }}
         >
-          <picture style={{ width: "25rem", minWidth: "25rem" }}>
+          <picture
+            style={{ width: "25rem" }}
+            className="min-w-[15rem] sm:min-w-[25rem]"
+          >
             <img
               src={pic}
               alt="house"
