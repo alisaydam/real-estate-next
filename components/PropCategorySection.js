@@ -1,20 +1,22 @@
 import Section from "./Section";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 export default function PropCategorySection() {
+  const { t } = useTranslation();
   return (
     <Section
       href="/"
-      name="Properties Categories"
-      title="Explore Out Properties"
+      name={t("home:property_categories")}
+      title={t("home:categories_title")}
     >
       <Link href={""}>
         <a>
           <div className="flex-col overflow-hidden w-auto rounded-tr-lg rounded-bl-lg text-center">
             <div className="relative">
               <p className="text-5xl font-bold absolute right-0 left-0 mx-auto z-10 mt-4">
-                Villa
+                {t("home:villa")}
               </p>
               <Image
                 alt="Mountains"
@@ -23,8 +25,8 @@ export default function PropCategorySection() {
                 width={250}
                 height={550}
               />
-              <p className="text-3xl font absolute bottom-0 right-0 left-0  mx-auto z-10 mb-6">
-                More Details ➤
+              <p className="text-3xl font-medium absolute bottom-0 uppercase right-0 left-0  mx-auto z-10 mb-6">
+                {t("home:more_details")} ➤
               </p>
             </div>
           </div>
@@ -35,7 +37,7 @@ export default function PropCategorySection() {
           <div className="flex-col overflow-hidden w-auto rounded-tr-lg rounded-bl-lg text-center">
             <div className="relative">
               <p className="text-5xl font-bold absolute right-0 left-0 mx-auto z-10 mt-4">
-                Villa
+                {t("home:apartment")}
               </p>
               <Image
                 alt="Mountains"
@@ -44,8 +46,8 @@ export default function PropCategorySection() {
                 width={250}
                 height={550}
               />
-              <p className="text-3xl font absolute bottom-0 right-0 left-0  mx-auto z-10 mb-6">
-                More Details ➤
+              <p className="text-3xl font absolute bottom-0 uppercase right-0 left-0  mx-auto z-10 mb-6">
+                {t("home:more_details")} ➤
               </p>
             </div>
           </div>
@@ -56,7 +58,7 @@ export default function PropCategorySection() {
           <div className="flex-col overflow-hidden w-auto rounded-tr-lg rounded-bl-lg text-center">
             <div className="relative">
               <p className="text-5xl font-bold absolute right-0 left-0 mx-auto z-10 mt-4">
-                Villa
+                {t("home:office")}
               </p>
               <Image
                 alt="Mountains"
@@ -65,8 +67,8 @@ export default function PropCategorySection() {
                 width={250}
                 height={550}
               />
-              <p className="text-3xl font absolute bottom-0 right-0 left-0  mx-auto z-10 mb-6">
-                More Details ➤
+              <p className="text-3xl font absolute bottom-0 uppercase right-0 left-0  mx-auto z-10 mb-6">
+                {t("home:more_details")} ➤
               </p>
             </div>
           </div>
@@ -77,7 +79,7 @@ export default function PropCategorySection() {
           <div className="flex-col overflow-hidden w-auto rounded-tr-lg rounded-bl-lg text-center">
             <div className="relative">
               <p className="text-5xl font-bold absolute right-0 left-0 mx-auto z-10 mt-4">
-                Villa
+                {t("home:land")}
               </p>
               <Image
                 alt="Mountains"
@@ -86,8 +88,8 @@ export default function PropCategorySection() {
                 width={250}
                 height={550}
               />
-              <p className="text-3xl font absolute bottom-0 right-0 left-0  mx-auto z-10 mb-6">
-                More Details ➤
+              <p className="text-3xl font absolute bottom-0 uppercase right-0 left-0  mx-auto z-10 mb-6">
+                {t("home:more_details")} ➤
               </p>
             </div>
           </div>
@@ -98,7 +100,7 @@ export default function PropCategorySection() {
           <div className="flex-col overflow-hidden w-auto rounded-tr-lg rounded-bl-lg text-center">
             <div className="relative">
               <p className="text-5xl font-bold absolute right-0 left-0 mx-auto z-10 mt-4">
-                Villa
+                {t("home:rentals")}
               </p>
               <Image
                 alt="Mountains"
@@ -107,8 +109,8 @@ export default function PropCategorySection() {
                 width={250}
                 height={550}
               />
-              <p className="text-3xl font absolute bottom-0 right-0 left-0  mx-auto z-10 mb-6">
-                More Details ➤
+              <p className="text-3xl font absolute bottom-0 uppercase right-0 left-0  mx-auto z-10 mb-6">
+                {t("home:more_details")} ➤
               </p>
             </div>
           </div>

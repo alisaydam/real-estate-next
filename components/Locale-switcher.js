@@ -1,9 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useTranslation } from "react-i18next";
 import styles from "./styles/components.module.css";
 
 export default function LocaleSwitcher() {
+  const { t } = useTranslation();
   const router = useRouter();
   const { locales, locale: activeLocale } = router;
   const otherLocales = locales.filter((locale) => locale !== activeLocale);
@@ -18,7 +20,7 @@ export default function LocaleSwitcher() {
           tabIndex="1"
           className="border-solid border-2 text-txtGreen font-semibold border-btnGreen bg-btnGreen px-2"
         >
-          CONTACT
+          {t("home:contact")}
         </p>
       </div>
       <div className={styles.languages_dropdown}>

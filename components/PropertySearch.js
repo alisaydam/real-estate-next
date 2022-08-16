@@ -1,8 +1,10 @@
 import styles from "./styles/components.module.css";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 export default function SearchProperties() {
-  
+  const { t } = useTranslation();
+
   const [formData, setFormData] = React.useState({
     region: "",
     propertyType: "",
@@ -29,7 +31,7 @@ export default function SearchProperties() {
         <form action="#" onSubmit={handleSubmit} className={styles.form}>
           <div className={styles.select_con}>
             <label className={styles.label} htmlFor="lang">
-              Region
+              {t("home:region")}
             </label>
             <select
               className={styles.select_form}
@@ -39,7 +41,7 @@ export default function SearchProperties() {
             >
               <option value="alanya">Alanya</option>
               <option value="antalya">Antalya</option>
-              <option value="istanbul">Istanbuk</option>
+              <option value="istanbul">Istanbul</option>
               <option value="mersin">Mersin</option>
             </select>
           </div>
@@ -52,7 +54,7 @@ export default function SearchProperties() {
           />
           <div className={styles.select_con}>
             <label className={styles.label} htmlFor="lang">
-              Property Type
+              {t("home:property_type")}
             </label>
             <select
               className={styles.select_form}
@@ -74,7 +76,7 @@ export default function SearchProperties() {
           />
           <div className={styles.select_con}>
             <label className={styles.label} htmlFor="lang">
-              Price Range
+              {t("home:price_range")}
             </label>
             <select
               className={styles.select_form}
@@ -99,11 +101,11 @@ export default function SearchProperties() {
           />{" "}
           <div className={styles.select_con}>
             <label className={styles.label} htmlFor="lang">
-              Bedrooms
+              {t("home:bedrooms")}
             </label>
             <select
               className={styles.select_form}
-              name="Price Range"
+              name="bedroom"
               id="lang"
               onChange={handleChange}
             >
@@ -115,7 +117,11 @@ export default function SearchProperties() {
             </select>
           </div>
           <div className={styles.select_con}>
-            <input className={styles.search_btn} type="submit" value="Search" />
+            <input
+              className={styles.search_btn}
+              type="submit"
+              value={t("home:search")}
+            />
           </div>
         </form>
       </div>

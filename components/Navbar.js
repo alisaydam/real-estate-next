@@ -6,12 +6,14 @@ import { useRouter } from "next/router";
 import { useEffect, useState, useContext } from "react";
 import { AppContext } from "../lib/state";
 import dynamic from "next/dynamic";
-
+import { useTranslation } from "react-i18next";
 const ThemeToggle = dynamic(() => import("../components/ThemeToggle"), {
   ssr: false,
 });
 
 export default function Navbar({ navRef }) {
+  const { t } = useTranslation();
+
   const { setTheme } = useContext(AppContext);
 
   const router = useRouter();
@@ -35,7 +37,7 @@ export default function Navbar({ navRef }) {
         <div className="flex justify-between w-2/12 cursor-pointer ">
           <picture>
             <img
-              className="min-w-[125px] md:min-w-[150px]"
+              className="min-w-[135px]"
               src={activeTheme === "dark" ? "/logo.png" : "/logo-w.png"}
               alt="romis real estate"
             />
@@ -45,24 +47,20 @@ export default function Navbar({ navRef }) {
       <div className={styles.nav_list_wrap + "  hidden space-x-6 md:flex"}>
         <ul className={styles.nav_list}>
           <li className={styles.list_item} style={asPath === "/" ? style : {}}>
-            <Link href="/">
-              <a>Home</a>
-            </Link>
+            <Link href="/">{t("home:homepage")}</Link>
           </li>
           <li
             className={styles.list_item}
             style={asPath === "/properties" ? style : {}}
           >
-            <Link href="/properties">
-              <a>Properties</a>
-            </Link>
+            <Link href="/properties">{t("home:properties")}</Link>
           </li>
           <li
             className={styles.list_item}
             style={asPath === "/about" ? style : {}}
           >
-            <Link href="/post">
-              <a>Blogs</a>
+            <Link href="/blogs">
+              <a>{t("home:blog")}</a>
             </Link>
           </li>
           <li
@@ -70,23 +68,23 @@ export default function Navbar({ navRef }) {
             style={asPath === "/statemang" ? style : {}}
           >
             <Link href="/statemang">
-              <a>Romis TV</a>
+              <a>{t("home:romis_tv")}</a>
             </Link>
           </li>
           <li
             className={styles.list_item}
-            style={asPath === "/post" ? style : {}}
+            style={asPath === "/blogs" ? style : {}}
           >
             <Link href="/api-hit">
-              <a>Romis Card</a>
+              <a>{t("home:romis_card")}</a>
             </Link>
           </li>
           <li
             className={styles.list_item}
-            style={asPath === "/post" ? style : {}}
+            style={asPath === "/blogs" ? style : {}}
           >
             <Link href="/api-hit">
-              <a>About Us</a>
+              <a>{t("home:about_us")}</a>
             </Link>
           </li>
           <li className={styles.list_item}></li>
@@ -128,23 +126,23 @@ export default function Navbar({ navRef }) {
                     style={asPath === "/" ? style : {}}
                   >
                     <Link href="/">
-                      <a>Home</a>
+                      <a>{t("home:homepage")}</a>
                     </Link>
                   </li>
                   <li
                     className={styles.list_item_side}
-                    style={asPath === "/post" ? style : {}}
+                    style={asPath === "/blogs" ? style : {}}
                   >
                     <Link href="/properties">
-                      <a>Properties</a>
+                      <a>{t("home:properties")}</a>
                     </Link>
                   </li>
                   <li
                     className={styles.list_item_side}
                     style={asPath === "/about" ? style : {}}
                   >
-                    <Link href="/post">
-                      <a>Blogs</a>
+                    <Link href="/blogs">
+                      <a>{t("home:blog")}</a>
                     </Link>
                   </li>
                   <li
@@ -152,23 +150,23 @@ export default function Navbar({ navRef }) {
                     style={asPath === "/statemang" ? style : {}}
                   >
                     <Link href="/statemang">
-                      <a>Romis TV</a>
+                      <a>{t("home:romis_tv")}</a>
                     </Link>
                   </li>
                   <li
                     className={styles.list_item_side}
-                    style={asPath === "/post" ? style : {}}
+                    style={asPath === "/blogs" ? style : {}}
                   >
                     <Link href="/api-hit">
-                      <a>Romis Card</a>
+                      <a>{t("home:romis_card")}</a>
                     </Link>
                   </li>
                   <li
                     className={styles.list_item_side}
-                    style={asPath === "/post" ? style : {}}
+                    style={asPath === "/blogs" ? style : {}}
                   >
                     <Link href="/api-hit">
-                      <a>About Us</a>
+                      <a>{t("home:about_us")}</a>
                     </Link>
                   </li>
                   <li className={styles.list_item_side}></li>

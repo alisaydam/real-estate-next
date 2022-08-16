@@ -1,10 +1,12 @@
 import Section from "./Section";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 export default function BlogsSection() {
+  const { t } = useTranslation();
   return (
-    <Section href="/" name="Blogs" title="Latest housing information">
+    <Section href="/" name={t("home:blogs")} title={t("home:blogs_title")}>
       <Link href="/">
         <a>
           <div className="flex-col overflow-hidden w-auto rounded-tr-lg rounded-bl-lg">

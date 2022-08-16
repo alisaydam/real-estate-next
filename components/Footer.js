@@ -52,7 +52,7 @@ export default function Footer() {
             </div>
             <div>
               <p className="text-3xl font-semibold my-5 text-center ">
-                Gategories
+                Categories
               </p>
               <ul className="text-center md:text-left">
                 <li className="mb-4">

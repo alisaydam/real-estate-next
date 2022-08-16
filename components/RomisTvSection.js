@@ -1,14 +1,12 @@
 import Section from "./Section";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 export default function RomisTvsection() {
+  const { t } = useTranslation();
   return (
-    <Section
-      href="/"
-      name="Romis TV"
-      title="Comfort is our Top priority for you"
-    >
+    <Section href="/" name={t("home:romis_tv")} title={t("home:tv_title")}>
       <Link href="/">
         <a>
           <div className="flex-col overflow-hidden w-auto rounded-tl-lg rounded-br-lg">

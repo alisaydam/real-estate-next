@@ -1,6 +1,15 @@
 import SearchProperties from "../../components/PropertySearch";
 import styles from "../../styles/Home.module.css";
 import PropertyCard from "../../components/PropertyCard";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["home"])),
+    },
+  };
+}
 
 export default function Properties() {
   return (
@@ -21,26 +30,23 @@ export default function Properties() {
         <PropertyCard pic="/house3.png" />
         <PropertyCard pic="/house3.png" />
       </div>
-      <div className="flex gap-4 justify-center">
-        {/* <pre>
-          <p className="p-4 bg-btnGreen inline rounded-tl-xl">&gt;</p>
-        </pre> */}
-        <p className="px-4 py-2 text-txtGreen font-semibold bg-btnGreen inline rounded-tl-2xl rounded-br-2xl text-2xl my-4 cursor-pointer">
+      <div className="flex gap-8 justify-center">
+        <p className="py-2 leading-10 text-btnGreen  font-semibold inline rounded-tl-2xl rounded-br-2xl text-4xl my-4 cursor-pointer">
           ᐸ
         </p>
-        <p className="px-4 py-2 text-txtGreen font-semibold bg-btnGreen inline rounded-tl-2xl rounded-br-2xl text-2xl my-4 cursor-pointer">
+        <p className="px-4 py-2 leading-10 text-txtGreen font-semibold bg-btnGreen inline rounded-tl-2xl rounded-br-2xl text-2xl my-4 cursor-pointer">
           1
         </p>
-        <p className="px-4 py-2 text-txtGreen font-semibold bg-btnGreen inline rounded-tl-2xl rounded-br-2xl text-2xl my-4 cursor-pointer">
+        <p className="px-4 py-2 leading-10 text-txtGreen font-semibold bg-btnGreen inline rounded-tl-2xl rounded-br-2xl text-2xl my-4 cursor-pointer">
           2
         </p>
-        <p className="px-4 py-2 text-txtGreen font-semibold bg-btnGreen inline rounded-tl-2xl rounded-br-2xl text-2xl my-4 cursor-pointer">
+        <p className="px-4 py-2 leading-10 text-txtGreen font-semibold bg-btnGreen inline rounded-tl-2xl rounded-br-2xl text-2xl my-4 cursor-pointer">
           3
         </p>
-        <p className="px-4 py-2 text-txtGreen font-semibold bg-btnGreen inline rounded-tl-2xl rounded-br-2xl text-2xl my-4 cursor-pointer">
+        <p className="px-4 py-2 leading-10 text-txtGreen font-semibold bg-btnGreen inline rounded-tl-2xl rounded-br-2xl text-2xl my-4 cursor-pointer">
           4
         </p>
-        <p className="px-4 py-2 text-txtGreen font-semibold bg-btnGreen inline rounded-tl-2xl rounded-br-2xl text-2xl my-4 cursor-pointer">
+        <p className="py-2 leading-10 text-btnGreen  font-semibold inline rounded-tl-2xl rounded-br-2xl text-4xl my-4 cursor-pointer">
           ᐳ
         </p>
       </div>

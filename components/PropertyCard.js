@@ -3,7 +3,12 @@ import Link from "next/link";
 
 export default function PropertyCard({ pic }) {
   return (
-    <Link href="/properties/[id]" as={`/properties/${"1"}`}>
+    <Link
+      href={{
+        pathname: "properties",
+        query: { id: "1" },
+      }}
+    >
       <a>
         <div
           className="flex w-full overflow-hidden shadow-xl"

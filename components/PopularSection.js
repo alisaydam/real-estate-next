@@ -1,11 +1,13 @@
 import styles from "./styles/components.module.css";
 import Section from "./Section";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 export default function PopularSection() {
+  const { t } = useTranslation();
   return (
     <div className="md:pt-20">
-      <Section href="/" name="Popular" title="Our Popular">
+      <Section href="/" name={t("home:popular")} title={t("home:our_popular")}>
         <Link href="#">
           <a>
             <div className={styles.properties_card}>

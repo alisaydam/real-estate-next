@@ -1,8 +1,10 @@
 import { useContext } from "react";
+import { useTranslation } from "react-i18next";
 import { AppContext } from "../lib/state";
 import SocialRow from "./SocialRow";
 
 export default function RomisMessage() {
+  const { t } = useTranslation();
   const { theme } = useContext(AppContext);
 
   return (
@@ -23,11 +25,7 @@ export default function RomisMessage() {
 
         <div className="max-w-2xl relative">
           <p className="text-8xl font-bold absolute -left-16 -top-16">“</p>
-          <p className="text-3xl font-semibold ">
-            If you talk about it, its a dream .If you envision it,its
-            possible,but if you schedule itits real.Your Real Estate Wealth
-            Strategist.With Romis your wealth matters,your strategy counts “
-          </p>
+          <p className="text-3xl font-semibold ">{t("home:romis_message")}</p>
         </div>
       </div>
       <hr className="border-solid border bg-clrText border-clrText my-10" />
