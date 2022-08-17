@@ -2,8 +2,10 @@ import { useContext } from "react";
 import { AppContext } from "../lib/state";
 import Link from "next/link";
 import SocialRow from "./SocialRow";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+  const { t } = useTranslation();
   const { theme } = useContext(AppContext);
 
   return (
@@ -24,7 +26,9 @@ export default function Footer() {
         <div className="flex flex-col flex-col  justify-between border-b md:flex-row ">
           <div className="flex justify-around w-full md:w-6/12">
             <div className="flex flex-col justify-center ">
-              <p className="text-3xl font-semibold mt-5 text-center ">Agents</p>
+              <p className="text-3xl font-semibold mt-5 text-center ">
+                {t("home:agents")}
+              </p>
               <div className="flex flex-col mx-auto mt-5">
                 <picture className="rounded-full">
                   <img
@@ -52,27 +56,33 @@ export default function Footer() {
             </div>
             <div>
               <p className="text-3xl font-semibold my-5 text-center ">
-                Categories
+                {t("home:categories")}
               </p>
               <ul className="text-center md:text-left">
                 <li className="mb-4">
                   <Link href="#">
-                    <a className="text-2xl font-medium ">Properties</a>
+                    <a className="text-2xl font-medium ">
+                      {t("home:properties")}
+                    </a>
                   </Link>
                 </li>
                 <li className="mb-4">
                   <Link href="#">
-                    <a className="text-2xl font-medium ">Blogs</a>
+                    <a className="text-2xl font-medium ">{t("home:blog")}</a>
                   </Link>
                 </li>
                 <li className="mb-4">
                   <Link href="#">
-                    <a className="text-2xl font-medium ">Romis TV</a>
+                    <a className="text-2xl font-medium ">
+                      {t("home:romis_tv")}
+                    </a>
                   </Link>
                 </li>
                 <li className="mb-4">
                   <Link href="#">
-                    <a className="text-2xl font-medium ">About Us</a>
+                    <a className="text-2xl font-medium ">
+                      {t("home:about_us")}
+                    </a>
                   </Link>
                 </li>
               </ul>
@@ -80,7 +90,7 @@ export default function Footer() {
           </div>
           <div className="w-full h-full md:w-6/12">
             <p className="text-3xl font-semibold my-5 text-center ">
-              Get In touch
+              {t("home:get_in_touch")}
             </p>
             <form>
               <div className="flex gap-6">
@@ -109,7 +119,7 @@ export default function Footer() {
               <div className="flex justify-center">
                 <input
                   type="submit"
-                  value="Submit"
+                  value={t("home:submit")}
                   className="bg-btnGreen font-semibold cursor-pointer text-clrSecondaryText rounded-tl-3xl rounded-br-3xl text-2xl px-16 py-2 mt-8 mb-8"
                 />
               </div>

@@ -23,7 +23,7 @@ li{
 }
 body,
 body[data-theme="light"] {
-  --color-text-primary: #176030;
+  --color-text-primary: #141B5A;
   --color-text-secondary: #076963;
   --color-bg-primary: #fff;
   --color-gradient-green:  #B1EEC6;
